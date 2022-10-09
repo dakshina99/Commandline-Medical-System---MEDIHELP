@@ -4,6 +4,7 @@ import re
 import pandas as pd
 from itertools import islice
 
+
 # helper functions
 
 def passwordHash(password):
@@ -20,7 +21,8 @@ def strongPasswordChecker(password):
 
 def reqPassword():
     print(
-        "Your password must contains,\nat least 8 characters\nAt least 1\nuppercase letter from: A-Z\n,lowercase letter from: a-z\n,number from: 0-9\n,any of the special character from: @#$%^&+=")
+        "Your password must contains,\nat least 8 characters\nAt least 1\nuppercase letter from: A-Z\n,lowercase "
+        "letter from: a-z\n,number from: 0-9\n,any of the special character from: @#$%^&+=")
     password = input("Enter the Password: ").strip()
     while not strongPasswordChecker(password):
         print("Password is not enough strong!")
@@ -29,7 +31,8 @@ def reqPassword():
     while password != repassword:
         print("Password and Re-Password are not matching!")
         print(
-            "Your password,\nMust contains at least 8 characters\nMust contains at least 1\nuppercase letters: A-Z\nlowercase letters: a-z\nnumbers: 0-9\nany of the special characters: @#$%^&+=")
+            "Your password,\nMust contains at least 8 characters\nMust contains at least 1\nuppercase letters: "
+            "A-Z\nlowercase letters: a-z\nnumbers: 0-9\nany of the special characters: @#$%^&+=")
         password = input("Enter the Password: ").strip()
         while not strongPasswordChecker(password):
             print("Password is not enough strong!")
@@ -46,7 +49,8 @@ def writeUserData(filename, dataArr):
 
 def nth_index(iterable, value, n):
     matches = (idx for idx, val in enumerate(iterable) if val == value)
-    return next(islice(matches, n-1, n), None)
+    return next(islice(matches, n - 1, n), None)
+
 
 # -----------------------------------------------------------------------------
 
@@ -101,6 +105,7 @@ def login(filename):
             print('\nsuccessfully logged in!\n')
             return True
 
+
 # User signup
 
 def signUp(filename):
@@ -113,7 +118,8 @@ def signUp(filename):
     if currentUser and int(currentUser[4]) > 8:
         while (True):
             print(
-                "Register a new Admin: 1\nRegister a new Doctor: 2\nRegister a new Nurse: 3\nRegister a new Lab Assistant: 4\nRegister a new Pharmacist: 5")
+                "Register a new Admin: 1\nRegister a new Doctor: 2\nRegister a new Nurse: 3\nRegister a new Lab "
+                "Assistant: 4\nRegister a new Pharmacist: 5")
             type = input("Choose User Type: ")
             if type not in ('1', '2', '3', '4', '5'):
                 print("You have entered a wrong value..! Re enter an acceptable value!!\n")
@@ -261,13 +267,15 @@ def viewData(filename):
         if int(currentUser[4]) == 8:
             n = 1
             for line in data[patient]:
-                print(f"({n})\nSickness Details:- {line[0]}\nDrug Prescription:- {line[1]}\nLab Test Prescription:- {line[2]}\nChanneled Doctor:- {line[3]}\n")
+                print(
+                    f"({n})\nSickness Details:- {line[0]}\nDrug Prescription:- {line[1]}\nLab Test Prescription:- {line[2]}\nChanneled Doctor:- {line[3]}\n")
                 n += 1
             return patient
         elif int(currentUser[4]) == 7:
             n = 1
             for line in data[patient]:
-                print(f"({n})\nSickness Details:- {line[0]}\nDrug Prescription:- {line[1]}\nLab Test Prescription:- {line[2]}\n")
+                print(
+                    f"({n})\nSickness Details:- {line[0]}\nDrug Prescription:- {line[1]}\nLab Test Prescription:- {line[2]}\n")
                 n += 1
             return patient
         elif int(currentUser[4]) == 6:
@@ -283,7 +291,8 @@ def viewData(filename):
     else:
         n = 1
         for line in data[currentUser[1]]:
-            print(f"({n})\nSickness Details:- {line[0]}\nDrug Prescription:- {line[1]}\nLab Test Prescription:- {line[2]}\nChanneled Doctor:- {line[3]}\n")
+            print(
+                f"({n})\nSickness Details:- {line[0]}\nDrug Prescription:- {line[1]}\nLab Test Prescription:- {line[2]}\nChanneled Doctor:- {line[3]}\n")
             n += 1
     return ''
 
@@ -400,6 +409,7 @@ def editLog(filename, patient):
             df.loc[nth_index(dataset, patient, int(num)), "sickness_details"] = sd
 
     df.to_csv(filename, index=False)
+
 
 # globals
 currentUser = []
