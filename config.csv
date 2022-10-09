@@ -1,0 +1,12 @@
+usernameLower,Username,Password,Type,privilegeLevel
+admin,admin,251800da8d338eb82819105d5f3c7629,admin,10
+testpatient1,TestPatient1,251800da8d338eb82819105d5f3c7629,patient,3
+testpatient2,TestPatient2,251800da8d338eb82819105d5f3c7629,patient,3
+testdoctor1,TestDoctor1,251800da8d338eb82819105d5f3c7629,doctor,8
+testdoctor2,TestDoctor2,251800da8d338eb82819105d5f3c7629,doctor,8
+testnurse1,TestNurse1,251800da8d338eb82819105d5f3c7629,nurse,7
+testnurse2,TestNurse2,251800da8d338eb82819105d5f3c7629,nurse,7
+testlabassist1,TestLabAssist1,251800da8d338eb82819105d5f3c7629,labassistant,6
+testlabassist2,TestLabAssist2,251800da8d338eb82819105d5f3c7629,labassistant,6
+testpharm1,TestPharm1,251800da8d338eb82819105d5f3c7629,pharmacist,5
+testpharm2,TestPharm2,251800da8d338eb82819105d5f3c7629,pharmacist,5

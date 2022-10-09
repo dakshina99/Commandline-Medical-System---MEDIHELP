@@ -1,0 +1,19 @@
+-type - priority
+
+Admin - 10
+Doctor - 8
+Nurse - 6
+Lab assistant - 5
+Drug Assistant - 5
+patient - 3
+
+
+-functions
+
+Login
+Signup
+Add Users
+Change password
+View consultation logs
+view user logs
+edit logs

@@ -1,0 +1,4 @@
+patient,sickness_details,drug_prescription,lab_prescription,doctor
+TestPatient1,COVID 19,Pandol,PCR Test,TestDoctor1
+TestPatient2,Dengue,Samahan,Full Count Blood Test,TestDoctor1
+TestPatient2,Chickenpox,"Sitavig, Zovirax",Whole infected cell test,TestDoctor2
